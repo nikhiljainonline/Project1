@@ -4,6 +4,12 @@ FROM node:7-onbuild
 # set maintainer
 LABEL maintainer "nikhiljainonline@gmail.com"
 
+# set working directory
+WORKDIR /code
+
+#copy code
+COPY . .
+
 # set a health check
 HEALTHCHECK --interval=5s \
             --timeout=5s \
